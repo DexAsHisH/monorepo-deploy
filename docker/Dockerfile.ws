@@ -22,6 +22,6 @@ RUN pnpm run db:generate
 
 RUN pnpm run build
 
-EXPOSE 4001
+EXPOSE 8001
 
 CMD ["pnpm", "run", "start:ws-backend"]

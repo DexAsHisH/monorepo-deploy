@@ -22,6 +22,6 @@ RUN pnpm run db:generate
 
 RUN pnpm run build
 
-EXPOSE 4000
+EXPOSE 8000
 
 CMD ["pnpm", "run", "start:http-backend"]
