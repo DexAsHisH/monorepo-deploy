@@ -25,4 +25,4 @@ jobs:
                 context: .
                 file: docker/Dockerfile.backend
                 push: true
-                tags: docker.io/DexAsHisH/monorepo-backend:${{github.sha}}
+                tags: dabralashish/monorepo-backend:${{ github.sha }}
