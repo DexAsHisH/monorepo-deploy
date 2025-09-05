@@ -8,7 +8,7 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - DATABASE_URL="postgresql://DexAsHisH:9h4xTJFtokqX@ep-noisy-truth-a584jf7y-pooler.us-east-2.aws.neon.tech/testdb2?sslmode=require&channel_binding=require"
+      - DATABASE_URL=
     depends_on:
       - postgres
   frontend:
@@ -16,11 +16,11 @@ services:
       context: .
       dockerfile: docker/Dockerfile.frontend
       args:
-        - DB_URL="postgresql://DexAsHisH:9h4xTJFtokqX@ep-noisy-truth-a584jf7y-pooler.us-east-2.aws.neon.tech/testdb2?sslmode=require&channel_binding=require"
+        - DB_URL=
     ports:
       - "3000:3000"
     environment:
-      - DATABASE_URL="postgresql://DexAsHisH:9h4xTJFtokqX@ep-noisy-truth-a584jf7y-pooler.us-east-2.aws.neon.tech/testdb2?sslmode=require&channel_binding=require"
+      - DATABASE_URL=
     depends_on:
       - postgres
   ws:
@@ -30,7 +30,7 @@ services:
     ports:
       - "8081:8081"
     environment:
-      - DATABASE_URL="postgresql://DexAsHisH:9h4xTJFtokqX@ep-noisy-truth-a584jf7y-pooler.us-east-2.aws.neon.tech/testdb2?sslmode=require&channel_binding=require"
+      - DATABASE_URL=
     depends_on:
       - postgres
 

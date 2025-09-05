@@ -1,5 +1,5 @@
 
-name: Deloy the Backend
+name: Deploy the frontend
 
 on:
     push:
@@ -23,6 +23,8 @@ jobs:
               uses: docker/build-push-action@v4
               with:
                 context: .
-                file: docker/Dockerfile.backend
+                file: docker/Dockerfile.frontend
+                build-args:
+                  DATABASE_URL=${{ secrets.DATABASE_URL }}
                 push: true
-                tags: dabralashish/monorepo-backend:${{ github.sha }}
+                tags: dabralashish/monorepo-frontend:${{ github.sha }}
